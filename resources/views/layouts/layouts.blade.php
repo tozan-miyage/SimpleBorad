@@ -13,6 +13,8 @@
             <!--componentsのcontentを使用する。-->
             @yield('content')
         </div>
+        @component('components.footer')
+        @endcomponent
         <!--bootstrap4で使用するJavaScriptを指定して読み込み-->
          <script src="{{ asset('js/app.js') }}"></script>
     </body>
