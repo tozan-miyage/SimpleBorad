@@ -1,3 +1,17 @@
+<!--view->layoutsフォルダのlayouts.blade.phpをテンプレートとして使う-->
+@extends('layouts.layouts')
+
+<!--タイトルは、Simple Boardと表示-->
+@section('title','Simple Board')
+
+ <!--layouts.blade.phpの@yield('content')部分に挿入-->
+@section('content')
+
+<!--フラッシュメッセージを表示-->
+    @if (session('message'))
+        {{ session('message') }}
+    @endif
+    
 <!--見出し-->
 <h1>Posts</h1>
 
@@ -22,3 +36,6 @@
 
 <!--New Post をクリックすると、URL"/post/create"アクセス。（create()メソッドを実行させる-->
 <a href="/posts/create">New Post</a>
+
+<!--@yield('content')に挿入する部分の終了-->
+@endsection

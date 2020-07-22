@@ -1,3 +1,12 @@
+<!--view->layoutsフォルダのlayouts.blade.phpをテンプレートとして使う-->
+@extends('layouts.layouts')
+
+<!--タイトルは、Simple Boardと表示-->
+@section('title','Simple Board')
+
+ <!--layouts.blade.phpの@yield('content')部分に挿入-->
+@section('content')
+
 <!--POSTメソッドでURL"/posts/:id"でアクセス。update()アクションを実行-->
 <form method="POST" action="/posts/{{ $post->id }}">
     <!--csrf攻撃への対処-->
@@ -17,3 +26,5 @@
 </form>
 
 <a href="/posts/">戻る</a>
+
+@endsection

@@ -6,7 +6,11 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+        <!--componentsフォルダのheader.blade.phpを挿入する-->
+        @component('components.header')
+        @endcomponent
         <div class="container">
+            <!--componentsのcontentを使用する。-->
             @yield('content')
         </div>
         <!--bootstrap4で使用するJavaScriptを指定して読み込み-->
