@@ -10,7 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// URLで'/'でアクセスされたら、viewフォルダのwelcome.blade.phpを表示する
 Route::get('/', function () {
     return view('welcome');
 });
+
+//URLで'/posts'でアクセスされたら、PostControllerのindex()を実行
+Route::resource('posts','PostController');
+
+// 以下の部分はHTTPS接続でアセット(CSSや画像など)を読み込むための処理。
+if (env('APP_ENV') === 'local'){
+    URL::forceScheme('https');
+}
