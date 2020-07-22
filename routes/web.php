@@ -11,9 +11,11 @@
 |
 */
 // URLで'/'でアクセスされたら、viewフォルダのwelcome.blade.phpを表示する
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// URLで'/'でアクセスされたら、PostControllerのindex()メソッドを実行する
+Route::get('/','PostController@index');
 
 //URLで'/posts'でアクセスされたら、PostControllerのindex()を実行
 Route::resource('posts','PostController');

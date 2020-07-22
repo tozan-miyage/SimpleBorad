@@ -9,7 +9,8 @@
         <!--componentsフォルダのheader.blade.phpを挿入する-->
         @component('components.header')
         @endcomponent
-        <div class="container">
+        <!--pt-5(padding-top: 3rem) pb-5でヘッダー固定部分のズレを修正-->
+        <div class="container pt-5 pb-5">
             <!--componentsのcontentを使用する。-->
             @yield('content')
         </div>

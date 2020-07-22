@@ -1,5 +1,6 @@
 <!--ナビゲーションバー-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--fixed-topでページ上部固定-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <!--ホームにリンクする-->
   <a class="navbar-brand" href="/">Simple Board</a>
   <!--トグルのボタンアイコンを表示-->
