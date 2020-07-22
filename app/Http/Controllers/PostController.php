@@ -46,6 +46,11 @@ class PostController extends Controller
     //  新規作成画面で入力した内容を保存
     public function store(Request $request)
     {
+        // 送られてきた$requestが空でないかを検証する
+        $request->validate([
+                'title' => 'required',
+                'content' => 'required',
+            ]);
         // 新規レコード作成
         $post = new Post();
         //titleカラムには、inputされたtitleを格納
@@ -98,6 +103,13 @@ class PostController extends Controller
     //  データを更新するメソッド
     public function update(Request $request, Post $post)
     {
+        
+        // 送られてきた$requestが空でないかを検証する
+        $request->validate([//複数条件は|max:255　225文字以内であれば作成できる
+                'title' => 'required|max:255',
+                'content' => 'required',
+            ]);
+            
         //titleカラムには、inputされたtitleを格納
         $post->title = $request->input('title');
         //contentカラムには、inputされたcontentを格納
