@@ -20,7 +20,7 @@
 {{ $post->content }}
 
 <!--Editをクリックすると、URL"/post/:id/edit"にアクセス。（edit()メソッドを実行させる）-->
-<a href="/post/{{ $post->id}}/edit">Edit</a>
+<a href="/posts/{{ $post->id }}/edit">Edit</a>
 <a href="/posts/">Posts</a> 
 
 @endsection
