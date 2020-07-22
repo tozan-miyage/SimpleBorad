@@ -44,7 +44,7 @@
         <!--$post->contentでinput内容を送信-->
         <!--<input type="text" name="content" value="{{ $post->content }}">下記のtexteriaに変更-->
         <!--送信したtitleが空でも元々の内容を補完。また、編集済みの場合はそのデータをそのまま保持-->
-        <textarea class="form-control" name="content">{{ old('content') == '' ? $post->content : old('content') }}"</textarea>
+        <textarea class="form-control h-25" name="content">{{ old('content') == '' ? $post->content : old('content') }}"</textarea>
      </div>
         <!--送信-->
         <!--<input type="submit">下記に変更-->

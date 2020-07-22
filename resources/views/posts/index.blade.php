@@ -7,10 +7,10 @@
  <!--layouts.blade.phpの@yield('content')部分に挿入-->
 @section('content')
 
-<!--フラッシュメッセージを表示-->
-    @if (session('message'))
-        {{ session('message') }}
-    @endif
+<!--フラッシュメッセージを表示componentsで追加したので削除でも良いのか確認-->
+    <!--@if (session('message'))-->
+    <!--    {{ session('message') }}-->
+    <!--@endif-->
     
     <!--見出し-->
     <h1>Posts</h1>
