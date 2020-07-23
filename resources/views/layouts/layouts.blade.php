@@ -2,6 +2,8 @@
     <head>
         <title>@yield('title')</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!--スマートフォン対応-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--bootstrap4のフォルダを指定して読み込み-->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
