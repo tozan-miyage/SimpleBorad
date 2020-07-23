@@ -22,6 +22,6 @@
         @component('components.footer')
         @endcomponent
         <!--bootstrap4で使用するJavaScriptを指定して読み込み-->
-         <script src="{{ asset('js/app.js') }}"></script>
+         <script src="{{ mi('js/app.js') }}"></script>
     </body>
 </html> 
