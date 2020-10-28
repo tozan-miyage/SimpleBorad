@@ -49,6 +49,44 @@
     
     <!--New Post をクリックすると、URL"/post/create"アクセス。（create()メソッドを実行させる-->
     <a href="/posts/create">New Post</a>
+    
+    <form id="input_title"　method="POST" action="">
+        <input type="text" name="input_title"/>
+    </form>
+    
+    <input id="submit" type="submit" value="タイトルを検索"/>
 
 <!--@yield('content')に挿入する部分の終了-->
+@endsection
+
+@section('js')
+    <script>
+        //全て読み込まれてから実行する
+        $(function(){
+            // formにinput_titleの内容を格納
+           var form = document.forms["input_title"];
+           
+            // submitボタンを押したら、実行
+           $('#submit').click(function(){
+               
+                $.ajax({
+                          
+                    url:"/getTitle",
+                          
+                    type:'POST',
+                          
+                    data:$(form).serialize(),
+                          
+                    dataType:'json'
+                          
+                    }).done(function(data){
+                        console.log(data);
+                          
+                    }).fail(function(data){
+                        console.log("失敗");
+                });
+            });
+        });
+           
+    </script>
 @endsection

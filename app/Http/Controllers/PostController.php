@@ -130,9 +130,15 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         // 削除実行
-        $post->delite();
+        $post->delete();
         
         // URL"/posts"にアクセス。index()を実行
         return redirect()->route('posts.index');
+    }
+    
+    public function getTitle(Request $request){
+        $input_title = $request->input('input_title');
+        
+        return response()->json($input_title);
     }
 }

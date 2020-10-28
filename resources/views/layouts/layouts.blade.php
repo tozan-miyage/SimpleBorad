@@ -22,6 +22,7 @@
         @component('components.footer')
         @endcomponent
         <!--bootstrap4で使用するJavaScriptを指定して読み込み-->
-         <script src="{{ mi('js/app.js') }}"></script>
+         <script src="{{ mix('js/app.js') }}"></script>
+         @yield('js')
     </body>
 </html> 
